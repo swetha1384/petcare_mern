@@ -1,0 +1,915 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.signup-background {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.signup-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://ichef.bbci.co.uk/images/ic/480xn/p0fgncns.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(70%); 
+  z-index: -1; 
+}
+
+.logincontent {
+  position: relative;
+  z-index: 1; /* Ensure the content is above the blurred background */
+  background: rgba(255, 255, 255, 0.2); /* White background with some transparency */
+  backdrop-filter: blur(10px); /* Blur effect for the content container */
+  padding: 100px 100px;
+  margin-left: 70px;
+  margin-top: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+.email {
+  width: 200px;
+  height: 30px;
+  margin-top: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.email::placeholder {
+  text-align: center;
+}
+
+.lgnbtn {
+  background-color: rgb(0, 200, 255);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+.image1{
+  height: 150px;
+  width: 150px;
+}
+.button{
+ background-color: aqua;
+ height:40px;
+ width: 100px;
+ border-radius: 20px;;
+}
+.schbtn{
+  background-color: rgb(252, 53, 53);
+  border-radius: 10px;
+  height: 40px;
+  width:150px;
+}
+.bg-red-200 {
+  background-color: #FECACA;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-20 {
+  gap: 5rem;
+}
+
+.border-2 {
+  border-width: 2px;
+  border-style: solid;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.bg-slate-100 {
+  background-color: #c5b0b0;
+}
+
+.image1 {
+  width: 100%;
+  height: auto;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #4A5568;
+  color: #fff;
+  cursor: pointer;
+}
+
+.wrap {
+  overflow-wrap: break-word;
+}
+.search {
+  text-align: center;
+  height:35px;
+  width: 250px;
+  margin-bottom: 20px;
+  line-height: 40px;
+  border: 1px solid #828282; 
+  border-radius: 20px; 
+  font-size: 16px;
+}
+
+.search::placeholder {
+  text-align: center; 
+  color: #afafaf;
+}
+
+.banner{
+  padding-top: 6px;
+  background-color:#444444;
+}
+/* styles.css */
+
+.slide-content {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  gap: 20px; /* Adjust the gap between columns */
+  padding: 20px;
+  background-color: #444444; 
+  border-radius: 10px; /* Optional: Add some border radius for better appearance */
+}
+
+.slide-column {
+  flex: 1; /* Allow columns to take equal space */
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center;
+}
+
+.slide-description {
+  max-width: 300px; /* Adjust the size of the description box */
+  text-align: center; /* Center the text */
+}
+
+.slide-description h1 {
+  font-size: 3.5em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.slide-description p {
+  font-size: 1em;
+  color: #ffffff;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column; /* Stack the image and text vertically */
+  align-items: center;
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 2.0rem;
+  background-color: #ffffff; /* bg-slate-100 */
+  max-width: 300px; /* Set a max-width to control the width of the cards */
+  height: auto;
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the box-shadow */
+  text-align: center; /* Center align the text */
+}
+
+.product-card img {
+  width: 100px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.product-details {
+  margin-top: 20px; /* Space between the image and details */
+}
+
+.product-description {
+  word-wrap: break-word; /* Ensure long words break and wrap */
+  white-space: normal; /* Prevent text from staying in one line */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis to indicate overflow */
+  margin-bottom: 10px; /* Add some space between elements */
+}
+
+.product-button {
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+
+/* Ensure all product cards are the same size */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 2.0rem;
+  background-color: #ffffff; /* bg-slate-100 */
+  max-width: 300px; /* Set a max-width to control the width of the cards */
+  height: auto;
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the box-shadow */
+}
+
+.product-card:hover {
+  box-shadow:  10px 10px 10px 10px  rgba(0, 0, 0, 0.1); /* Gray box shadow on hover */
+}
+
+
+.product-card img {
+  width: 100%; /* Ensure all images take up the full width of their container */
+  height: 100px; /* Maintain aspect ratio */
+}
+
+.product-description {
+  word-wrap: break-word; /* Ensure long words break and wrap */
+  white-space: normal; /* Prevent text from staying in one line */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis to indicate overflow */
+  margin-bottom: 10px; /* Add some space between elements */
+}
+
+.product-button {
+  align-self: flex-end; /* Align the button at the bottom */
+}
+
+.fetchimage{
+  height: 100px;
+  width: 100px;
+}
+.allproimages{
+  border-radius: 200px;
+  height: 170px;
+  width: 170px;
+  margin-bottom: 50px;
+}
+.allproimages1{
+  border-radius: 200px;
+  height: 170px;
+  width: 170px;
+  margin-bottom: 50px;
+  /* margin-left: 250px; */
+}
+/* Add this CSS to your existing CSS file */
+
+@keyframes button-click {
+  0% {
+    transform: scale(1);
+  }
+  25%{
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.clicked {
+  animation: button-click 0.5s forwards;
+}
+
+
+
+
+
+
+
+
+/* Navbar Styles */
+.nav {
+  background-color: #000000;
+  padding: 10px 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+.nav nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav nav a i {
+  margin-right: 8px; /* Add some space between the icon and text */
+}
+
+.nav nav a:hover {
+  background-color: #474747;
+  border-radius: 20px;
+}
+
+.navimg {
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+.tskbtn{
+  background-color: rgb(76, 197, 253);
+  border-radius: 10px;
+  height: 40px;
+  width:120px;
+  margin-left: 20px;
+}
+.showtask {
+  background-color: rgb(235, 235, 235);
+  width: 500px;
+  height: 100px;
+  box-shadow: 0px 0px 8px rgb(255, 255, 255);
+  border-radius: 10px; 
+  margin: 20px 0px 0px 20px;
+}
+.shwtskbtn {
+  padding: 10px 15px;
+  margin-left: 70px;
+  margin-top: 60px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.shwtskbtn:hover {
+  background-color: #0361c5;
+}
+.showtask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.showbackimg {
+  margin-top: 35px;
+  background-color: #444444;
+  height: 100vh; 
+}
+.task-manager-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.label-content {
+  display: flex;
+  gap: 10px; /* Adjust the gap as needed */
+}
+
+.label-content b {
+  flex-shrink: 0; /* Prevent the label from shrinking */
+}
+
+
+.add-task-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.show-task-section {
+  flex: 2;
+}
+
+.showtaskback {
+  position: relative;
+  background: url('https://img.pikbest.com/wp/202345/the-front-group-of-pets-are-in-camera_9577829.jpg!bw700') no-repeat center center;
+  background-size: cover;
+  height: 100vh; /* Ensures the background image covers the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.showtaskback::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: -1;
+}
+
+/* Adjust other elements to ensure they appear above the background image */
+.showtask, .nav, .shwtskbtn {
+  position: relative;
+  z-index: 2;
+}
+
+
+.add-task-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.tskbtn {
+  padding: 10px 15px;
+  margin-left: 100px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tskbtn:hover {
+  background-color: #0361c5;
+}
+
+.add-task-container {
+max-width: 600px;
+margin-top: 80px;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 8px;
+background-color: #f9f9f9;
+}
+.showbackaddtask {
+  position: relative;
+  background: url('https://img.pikbest.com/wp/202345/the-front-group-of-pets-are-in-camera_9577829.jpg!bw700') no-repeat center center;
+  background-size: cover;
+  height: 100vh; /* Ensures the background image covers the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.showbackaddtask::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1;
+}
+
+.add-task-container, .nav {
+  position: relative;
+  z-index: 2;
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.navigation-links {
+  margin-top: 20px;
+}
+
+.navigation-links a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.navigation-links a:hover {
+  text-decoration: underline;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.deleteimg {
+  height: 20px;
+  width: 20px;
+  margin-left: 40px;
+}
+.error-message{
+  color: red;
+}
+/* Navbar Styles */
+.nav {
+  background-color: #000000;
+  padding: 10px 0;
+  top: 0;
+  position: fixed;
+  width: 95%;
+  z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+.nav nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav nav a:hover {
+  background-color: #474747;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.navimg {
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  margin-left: 350px;
+}
+
+/* Dashboard Styles */
+.dashboard {
+  margin-top: 35px;
+}
+.fetchimage {
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #474747;
+}
+.checkbox {
+  height: 20px;
+  width: 20px;
+  margin-left: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #000;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+.checkbox:checked {
+  background-color: rgb(48, 172, 46);
+}
+
+.checkbox:checked::after {
+  content: '✓';
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Cart.css */
+.cart-container {
+  width:70%;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #343a40;
+}
+
+.cart-items {
+  margin-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.item-details {
+  flex-grow: 1;
+  margin-left: 200px;
+}
+.desprice{
+   margin-top: 20px;
+}
+
+.cart-total {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.cart-total h2 {
+  margin: 0;
+  color: #495057;
+}
+.cartimg{
+  height: 80px;
+  width: 80px;
+}
+.showbackcart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  background-color: #444444;
+  min-height: 100vh;
+  background-image: url('https://t3.ftcdn.net/jpg/08/35/31/18/360_F_835311852_WiHZPtNVSxwzBLtjTxMMJjjDukYBn9NM.jpg');
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.removebtn button {
+  padding: 6px 10px;
+  background-color: #e80000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+.removebtn button:hover {
+  background-color: #b90202;
+}
+
+
+
+
+
+
+
+
+
+
+.showbackabout {
+  position: relative;
+  min-height: 100vh;
+  margin-top: 35px;
+  overflow: hidden; /* Ensures the pseudo-element covers the entire area */
+}
+
+.showbackabout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://t3.ftcdn.net/jpg/08/35/31/18/360_F_835311852_WiHZPtNVSxwzBLtjTxMMJjjDukYBn9NM.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px); /* Adjust the blur intensity as needed */
+  z-index: -1; /* Ensures the background stays behind the content */
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial, sans-serif';
+  background-color: rgba(249, 249, 249, 0.9); /* Slightly transparent background */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensures it is above the blurred background */
+  z-index: 1;
+}
+
+.about-container h1 {
+  text-align: center;
+  color: #333;
+}
+
+.about-container p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #666;
+  text-align: justify;
+}
+
+.about-container h2 {
+  margin-top: 30px;
+  color: #333;
+}
+
+.about-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.about-container ul li {
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px; /* Adjust as needed */
+  width: fit-content; /* Adjust as needed */
+  margin: auto; /* Center the container */
+}
+
+.contactimg {
+  min-height: 100vh;
+  width: 600px;
+}
+
+.contact-contents {
+  margin-left: 150px;
+  margin-top: 50px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form-group label {
+  width: 100px; /* Adjust this value based on your layout needs */
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.contact-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.contact-textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.send-button {
+  padding: 10px 30px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.send-button:hover {
+  background-color: #0361c5;
+}
+
+.con_bg {
+  background-color: #444444;
+  color: white;
+}
+
+.success-message {
+  color: green;
+  margin-top: 20px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 20px;
+}
