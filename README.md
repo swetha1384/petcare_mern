@@ -26,6 +26,11 @@
   Designed for both pet owners and pet shop admins to manage activities with minimal effort.
 
 ---
+## 🚀 Live Site
+
+🌐 [PetCare App Live](https://petcare-client-three.vercel.app/)
+
+---
 
 ## 📸 Screenshots
 ![Screenshot 2025-04-18 111939](https://github.com/user-attachments/assets/ec8b6598-e79d-448e-a311-e0dcbe4d487b)
